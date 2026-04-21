@@ -2,9 +2,10 @@ let chartInstance = null;
 
 async function loadData() {
     try {
+        const timestamp = Date.now();
         const [summaryResponse, dataResponse] = await Promise.all([
-            fetch('data/health-summary.json'),
-            fetch('data/health-data.json')
+            fetch(`data/health-summary.json?t=${timestamp}`),
+            fetch(`data/health-data.json?t=${timestamp}`)
         ]);
 
         if (!summaryResponse.ok || !dataResponse.ok) {
