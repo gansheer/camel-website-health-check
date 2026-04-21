@@ -4,7 +4,7 @@ Automated monitoring dashboard for https://camel.apache.org/
 
 ## Features
 
-- Checks website status every 4 hours
+- Checks website status every hour
 - Monitors HTTP status, response time, and SSL certificate validity
 - Stores 90-day historical data
 - Beautiful GitHub Pages dashboard with:
@@ -15,7 +15,7 @@ Automated monitoring dashboard for https://camel.apache.org/
 
 ## How It Works
 
-1. **GitHub Actions** runs a scheduled workflow every 4 hours
+1. **GitHub Actions** runs a scheduled workflow every hour
 2. **Health check script** validates the website and collects metrics
 3. **Data files** are stored in the `gh-pages` branch
 4. **Dashboard** automatically updates via GitHub Pages

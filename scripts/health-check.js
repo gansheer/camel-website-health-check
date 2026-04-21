@@ -19,24 +19,26 @@ async function checkWebsite(url) {
       timeout: TIMEOUT_MS,
       headers: { 'User-Agent': 'Mozilla/5.0 (Health Check Bot)' }
     }, (res) => {
-      res.on('data', (chunk) => {
-        responseData += chunk.toString();
-      });
+      // Get certificate early, before socket might be destroyed
+      let sslValid = true;
+      let sslDaysRemaining = 0;
 
-      res.on('end', () => {
-        const responseTime = Date.now() - startTime;
+      if (res.socket && res.socket.getPeerCertificate) {
         const cert = res.socket.getPeerCertificate();
-
-        let sslValid = true;
-        let sslDaysRemaining = 0;
-
         if (cert && cert.valid_to) {
           const expiryDate = new Date(cert.valid_to);
           const now = new Date();
           sslDaysRemaining = Math.floor((expiryDate - now) / (1000 * 60 * 60 * 24));
           sslValid = sslDaysRemaining > 0;
         }
+      }
 
+      res.on('data', (chunk) => {
+        responseData += chunk.toString();
+      });
+
+      res.on('end', () => {
+        const responseTime = Date.now() - startTime;
         const contentCheck = responseData.toLowerCase().includes('camel');
 
         resolve({
