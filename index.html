@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camel Website Health Check</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Apache Camel Website Health Check</h1>
+            <p class="subtitle">Monitoring <a href="https://camel.apache.org/" target="_blank">camel.apache.org</a></p>
+        </header>
+
+        <main>
+            <section class="status-section">
+                <div id="statusIndicator" class="status-indicator">
+                    <div class="status-badge unknown">
+                        <span class="status-icon">?</span>
+                        <span class="status-text">Loading...</span>
+                    </div>
+                    <div class="status-details">
+                        <p id="lastCheck">Last check: --</p>
+                        <p id="responseTime">Response time: --</p>
+                        <p id="sslStatus">SSL: --</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="uptime-section">
+                <h2>Uptime Statistics</h2>
+                <div class="uptime-grid">
+                    <div class="uptime-card">
+                        <div class="uptime-value" id="uptime24h">--%</div>
+                        <div class="uptime-label">Last 24 Hours</div>
+                    </div>
+                    <div class="uptime-card">
+                        <div class="uptime-value" id="uptime7d">--%</div>
+                        <div class="uptime-label">Last 7 Days</div>
+                    </div>
+                    <div class="uptime-card">
+                        <div class="uptime-value" id="uptime30d">--%</div>
+                        <div class="uptime-label">Last 30 Days</div>
+                    </div>
+                    <div class="uptime-card">
+                        <div class="uptime-value" id="uptimeAll">--%</div>
+                        <div class="uptime-label">All Time</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <h2>Response Time Trend</h2>
+                <div class="chart-container">
+                    <canvas id="responseChart"></canvas>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2>Recent Checks</h2>
+                <div class="table-container">
+                    <table id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Status</th>
+                                <th>Response Time</th>
+                                <th>HTTP</th>
+                                <th>SSL</th>
+                                <th>Content</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody">
+                            <tr>
+                                <td colspan="6" class="loading">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Monitored every 4 hours via
+                <a href="https://github.com/gfournie/camel-website-health-check" target="_blank">GitHub Actions</a>
+            </p>
+            <p class="last-updated" id="lastUpdated">Last updated: --</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
