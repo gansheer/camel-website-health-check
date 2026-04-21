@@ -1,10 +1,10 @@
 {
   "checks": [
     {
-      "timestamp": "2026-04-21T09:04:50.374Z",
+      "timestamp": "2026-04-21T11:07:32.271Z",
       "status": "up",
       "httpStatus": 200,
-      "responseTime": 265,
+      "responseTime": 162,
       "sslValid": true,
       "sslDaysRemaining": 65,
       "contentCheck": true,
@@ -12,8 +12,8 @@
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-04-21T09:04:50.374Z",
+    "lastUpdated": "2026-04-21T11:07:32.271Z",
     "totalChecks": 1,
-    "oldestCheck": "2026-04-21T09:04:50.374Z"
+    "oldestCheck": "2026-04-21T11:07:32.271Z"
   }
 }
