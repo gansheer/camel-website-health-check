@@ -193,6 +193,10 @@ th {
     border-bottom: 2px solid var(--color-border);
 }
 
+th.text-center {
+    text-align: center;
+}
+
 td {
     padding: 0.75rem;
     border-bottom: 1px solid var(--color-border);
@@ -213,6 +217,10 @@ td {
 .status-down {
     color: var(--color-down);
     font-weight: 600;
+}
+
+td.check-icon {
+    text-align: center;
 }
 
 .check-icon {
