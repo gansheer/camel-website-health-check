@@ -18,6 +18,23 @@ jobs:
         with:
           ref: main
 
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy existing data from gh-pages
+        run: |
+          mkdir -p data
+          if [ -f gh-pages-branch/data/health-data.json ]; then
+            cp gh-pages-branch/data/health-data.json data/
+          fi
+          if [ -f gh-pages-branch/data/health-summary.json ]; then
+            cp gh-pages-branch/data/health-summary.json data/
+          fi
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
@@ -27,14 +44,7 @@ jobs:
         run: node scripts/health-check.js
         continue-on-error: true
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-          path: gh-pages-branch
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Copy data files to gh-pages
+      - name: Copy updated data to gh-pages
         run: |
           mkdir -p gh-pages-branch/data
           if [ -f data/health-data.json ]; then
