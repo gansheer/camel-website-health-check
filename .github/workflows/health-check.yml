@@ -1,0 +1,57 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run health check
+        run: node scripts/health-check.js
+        continue-on-error: true
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+
+      - name: Copy data files to gh-pages
+        run: |
+          mkdir -p gh-pages-branch/data
+          if [ -f data/health-data.json ]; then
+            cp data/health-data.json gh-pages-branch/data/
+          fi
+          if [ -f data/health-summary.json ]; then
+            cp data/health-summary.json gh-pages-branch/data/
+          fi
+
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages-branch
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update health check data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            git push
+          fi
