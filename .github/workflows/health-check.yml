@@ -1,5 +1,8 @@
 name: Health Check
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 on:
   schedule:
     - cron: '0 */2 * * *'  # Every 2 hours
