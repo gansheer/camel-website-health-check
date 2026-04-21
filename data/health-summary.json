@@ -1,1 +1,20 @@
-{"current":{"status":"unknown","lastCheck":null,"responseTime":0,"sslDaysRemaining":0},"uptime":{"last24h":0,"last7d":0,"last30d":0,"allTime":0},"performance":{"avgResponseTime7d":0,"avgResponseTime30d":0,"minResponseTime":0,"maxResponseTime":0}}
+{
+  "current": {
+    "status": "up",
+    "lastCheck": "2026-04-21T09:04:50.374Z",
+    "responseTime": 265,
+    "sslDaysRemaining": 65
+  },
+  "uptime": {
+    "last24h": 100,
+    "last7d": 100,
+    "last30d": 100,
+    "allTime": 100
+  },
+  "performance": {
+    "avgResponseTime7d": 265,
+    "avgResponseTime30d": 265,
+    "minResponseTime": 265,
+    "maxResponseTime": 265
+  }
+}
