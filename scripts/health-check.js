@@ -17,7 +17,7 @@ async function checkWebsite(url) {
 
     const req = https.get(url, {
       timeout: TIMEOUT_MS,
-      headers: { 'User-Agent': 'Mozilla/5.0 (Health Check Bot)' }
+      headers: { 'User-Agent': 'Mozilla/5.0 (Health Check Bot)', 'accept-encoding': 'gzip, deflate, br, zstd' },
     }, (res) => {
       // Get certificate early, before socket might be destroyed
       let sslValid = true;
