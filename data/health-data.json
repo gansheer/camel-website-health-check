@@ -1249,11 +1249,21 @@
       "sslDaysRemaining": 53,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-05-04T02:34:10.710Z",
+      "status": "up",
+      "httpStatus": 200,
+      "responseTime": 185,
+      "sslValid": true,
+      "sslDaysRemaining": 52,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-05-03T22:37:03.908Z",
-    "totalChecks": 125,
+    "lastUpdated": "2026-05-04T02:34:10.710Z",
+    "totalChecks": 126,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
