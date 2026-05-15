@@ -2219,11 +2219,21 @@
       "sslDaysRemaining": 41,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-05-15T06:52:47.828Z",
+      "status": "up",
+      "httpStatus": 200,
+      "responseTime": 241,
+      "sslValid": true,
+      "sslDaysRemaining": 41,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-05-15T02:48:10.425Z",
-    "totalChecks": 222,
+    "lastUpdated": "2026-05-15T06:52:47.828Z",
+    "totalChecks": 223,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
