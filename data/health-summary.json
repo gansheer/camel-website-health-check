@@ -1,18 +1,18 @@
 {
   "current": {
-    "status": "up",
-    "lastCheck": "2026-06-02T22:20:57.603Z",
-    "responseTime": 273,
-    "sslDaysRemaining": 83
+    "status": "down",
+    "lastCheck": "2026-06-03T03:42:35.330Z",
+    "responseTime": 94,
+    "sslDaysRemaining": 82
   },
   "uptime": {
-    "last24h": 83.3,
-    "last7d": 92.2,
-    "last30d": 90.7,
-    "allTime": 90.5
+    "last24h": 60,
+    "last7d": 90,
+    "last30d": 90.2,
+    "allTime": 90.3
   },
   "performance": {
-    "avgResponseTime7d": 210,
+    "avgResponseTime7d": 206,
     "avgResponseTime30d": 206,
     "minResponseTime": 27,
     "maxResponseTime": 672
