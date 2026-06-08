@@ -4089,11 +4089,21 @@
       "sslDaysRemaining": 77,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-06-08T18:23:01.120Z",
+      "status": "up",
+      "httpStatus": 200,
+      "responseTime": 238,
+      "sslValid": true,
+      "sslDaysRemaining": 77,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-06-08T14:03:25.553Z",
-    "totalChecks": 409,
+    "lastUpdated": "2026-06-08T18:23:01.120Z",
+    "totalChecks": 410,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
