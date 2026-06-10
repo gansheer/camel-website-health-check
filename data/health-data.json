@@ -4209,11 +4209,21 @@
       "sslDaysRemaining": 75,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-06-10T12:53:38.902Z",
+      "status": "down",
+      "httpStatus": 404,
+      "responseTime": 288,
+      "sslValid": true,
+      "sslDaysRemaining": 75,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-06-10T08:03:59.206Z",
-    "totalChecks": 421,
+    "lastUpdated": "2026-06-10T12:53:38.902Z",
+    "totalChecks": 422,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
