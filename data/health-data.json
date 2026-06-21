@@ -4929,11 +4929,21 @@
       "sslDaysRemaining": 65,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-06-21T03:44:30.755Z",
+      "status": "up",
+      "httpStatus": 200,
+      "responseTime": 173,
+      "sslValid": true,
+      "sslDaysRemaining": 64,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-06-20T23:03:51.414Z",
-    "totalChecks": 493,
+    "lastUpdated": "2026-06-21T03:44:30.755Z",
+    "totalChecks": 494,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
