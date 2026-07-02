@@ -5829,11 +5829,21 @@
       "sslDaysRemaining": 53,
       "contentCheck": false,
       "error": null
+    },
+    {
+      "timestamp": "2026-07-02T21:00:34.287Z",
+      "status": "up",
+      "httpStatus": 200,
+      "responseTime": 250,
+      "sslValid": true,
+      "sslDaysRemaining": 53,
+      "contentCheck": false,
+      "error": null
     }
   ],
   "metadata": {
-    "lastUpdated": "2026-07-02T19:18:40.634Z",
-    "totalChecks": 583,
+    "lastUpdated": "2026-07-02T21:00:34.287Z",
+    "totalChecks": 584,
     "oldestCheck": "2026-04-21T11:11:33.419Z"
   }
 }
